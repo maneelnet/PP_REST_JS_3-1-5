@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:fragment="logout">
+    <form id="logout" class="d-flex" name="logoutForm" th:action="@{/logout}" method="post">
+        <a class="nav-link" href="javascript:$('logout').submit();">
+            Logout
+        </a>
+    </form>
+</th:block>
+</body>
+</html>

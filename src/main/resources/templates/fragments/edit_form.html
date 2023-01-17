@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div th:fragment="edit_form">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title">Edit user</h3>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form role="form" id="userprofile-form">
+      <div class="modal-body">
+        <div class="container col-6 text-center">
+          <div class="form-group text-center">
+            <input id="method" type="hidden" name="_method" value="post">
+            <div>
+              <label for="editId">ID</label>
+              <input type="text" class="form-control" id="editId" readonly name="id">
+            </div>
+            <div>
+              <label for="editFirstName">First name</label>
+              <input type="text" class="form-control"  id="editFirstName" name="firstName">
+            </div>
+            <div>
+              <label for="editLastName">Last name</label>
+              <input type="text" class="form-control"  id="editLastName" name="lastName">
+            </div>
+            <div>
+              <label for="editAge">Age</label>
+              <input type="number" class="form-control"  id="editAge" name="age">
+            </div>
+            <div>
+              <label for="editEmail">E-mail</label>
+              <input type="text" class="form-control"  id="editEmail" name="email">
+            </div>
+            <div id="password-div">
+              <label for="editPassword">Password</label>
+              <input type="password" class="form-control" id="editPassword" name="password" autocomplete="current-password">
+            </div>
+            <div id="roleInputs">
+              <label for="editRoles"><b>Role</b></label>
+              <select multiple class="form-control select-role" id="editRoles" name="roles">
+
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn submit-button">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:fragment="add_form">
+  <div class="container col-6 form-group text-center">
+    <form role="form" id="new-user-form">
+      <div>
+        <label for="newFirstName"><b>First name</b></label>
+        <input type="text" class="form-control" placeholder="Enter first name" id="newFirstName" name="firstName" required>
+      </div>
+      <div>
+        <label for="newLastName"><b>Last name</b></label>
+        <input type="text" class="form-control" placeholder="Enter last name" id="newLastName" name="lastName" required>
+      </div>
+      <div>
+        <label for="newAge"><b>Age</b></label>
+        <input type="number" class="form-control" id="newAge" name="age" required>
+      </div>
+      <div>
+        <label for="newEmail"><b>E-mail</b></label>
+        <input type="text" class="form-control" placeholder="Enter e-mail" id="newEmail" autocomplete="username" name="email" required>
+      </div>
+      <div id="password-div">
+        <label for="newPassword"><b>Password</b></label>
+        <input type="password" class="form-control" placeholder="Enter password" id="newPassword" name="password" autocomplete="current-password" required>
+      </div>
+      <div>
+        <label for="newRoles"><b>Role</b></label>
+        <select multiple class="form-control select-role" id="newRoles" name="roles" required>
+
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-success mt-3">Add new User</button>
+      </div>
+    </form>
+  </div>
+</th:block>
+</body>
+</html>
