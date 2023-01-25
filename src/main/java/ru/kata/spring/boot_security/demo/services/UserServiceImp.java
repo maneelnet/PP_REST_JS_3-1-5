@@ -52,7 +52,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public List<User> usersList() {
-        return userRepository.findAll();
+        return userRepository.usersList();
     }
 
     @Override
@@ -76,7 +76,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public User showUser(Long id) {
-        return userRepository.findById(id).get();
+        return userRepository.showUser(id);
     }
 
 
